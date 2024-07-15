@@ -1,6 +1,5 @@
 # ===----------------------------------------------------------------------=== #
-# Licensed under the Apache License v2.0 with LLVM Exceptions:
-# https://llvm.org/LICENSE.txt
+# Licensed under the Apache License v2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
