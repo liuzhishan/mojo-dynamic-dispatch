@@ -113,7 +113,6 @@ trait Echoable(CollectionElement, ExplicitlyCopyable):
         ...
 
 
-# FIXME(#27380): Can't pass *Ts to a function parameter, only type parameter.
 struct UnionSize[*Ts: Echoable]():
     @staticmethod
     fn compute() -> Int:
@@ -127,7 +126,6 @@ struct UnionSize[*Ts: Echoable]():
         return align_up(size, alignof[Int]())
 
 
-# FIXME(#27380): Can't pass *Ts to a function parameter, only type parameter.
 struct UnionTypeIndex[T: Echoable, *Ts: Echoable]:
     @staticmethod
     fn compute() -> Int8:
@@ -163,8 +161,7 @@ struct MyVariant[*Ts: Echoable](
 
     Example:
     ```mojo
-    from utils import Variant
-    alias IntOrString = Variant[Int, String]
+    alias IntOrString = MyVariant[Int, String]
     fn to_string(inout x: IntOrString) -> String:
         if x.isa[String]():
             return x[String][]
