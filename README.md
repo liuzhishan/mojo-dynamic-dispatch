@@ -5,7 +5,7 @@ Implement mojo dynamic dispatch using trait and union type.
 ## Implementation
 
 Mojo generic can only support same type `T` as parameter. How to achieve subtype dynamic
-dispatch, such as `std::box::Boxed<dyn trait>` in rust, or `std::shared_ptr<Base *>` ?
+dispatch, such as `std::box::Boxed<dyn trait>` in rust, or `std::shared_ptr<Base *>` in c++?
 
 We can combine the idea of Variant and trait in Mojo to achieve this.
 
