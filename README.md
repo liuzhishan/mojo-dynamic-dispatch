@@ -43,11 +43,11 @@ As the above code shows, when we have a Variant at runtime, we known its underly
 We can compare it with all the candidate types, and then get the actual object, call the
 trait function. This has exactly the same effect of dynamic dispatch in rust or c++.
 
-The comparing between types is auctually comparing using an `int8`, which is determined by
+The comparing between types is actually comparing using an `int8`, which is determined by
 the order of types in compile time. And loop of the types is unrolled in compile time using
-`@parameter` meta programming. At runtime, there are just some `int8` comparing to determing
+`@parameter` meta programming. At runtime, there are just some `int8` comparing to determine
 which object to use. Only Exactly one of them will be true. I'm not sure how fast it is
-comparing to vtable in c++ or rust, but it should be really fast with only some `int8` comparing.
+comparing to v-table in c++ or rust, but it should be really fast with only some `int8` comparing.
 
 Wow, awesome mojo! We just implement dynamic dispatch in a library, not in the compiler! Just
 as mojo's design principle said, implement the language in library, not in compiler.
